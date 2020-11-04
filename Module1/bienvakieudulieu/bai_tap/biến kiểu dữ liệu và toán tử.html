@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BIẾN KIỂU DỮ LIỆU VÀ TOÁN TỬ</title>
+</head>
+<body>
+  <script>
+      let inputphysical;
+      let inputchemistry;
+      let inputbiological;
+      inputphysical = prompt("Điểm vật lý");
+      inputchemistry = prompt("điểm hóa học");
+      inputbiological =prompt("điểm sinh học");
+      let physical = parseInt(inputphysical);
+      let chemistry = parseInt(inputchemistry);
+      let biological = parseInt(inputbiological);
+      let avager =(physical+ chemistry+ biological)/3;
+      let sum =(physical+ chemistry+ biological)
+      document.write("điểm trung bình :" + avager +'<br>')
+      document.write("tổng :" + sum)
+
+  </script>
+</body>
+</html>
