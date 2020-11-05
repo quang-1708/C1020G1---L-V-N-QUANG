@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đăng nhập hệ thống</title>
+</head>
+<body>
+<script>
+    let userName =prompt('who is there?')
+    if (userName == 'admin'){
+        alert("yêu cầu nhập mật khẩu")
+        let pass = prompt('password')
+        if(pass == 'themaster'){
+            alert( 'wellcome!' )
+        }else if ( pass ==null ){
+            alert( 'canceled.' )
+        }else{
+            alert( 'wrong password' )
+        }
+    } else if ( userName == null){
+        alert( 'canceled.' )
+    }else{
+        alert( "I don't know you" )
+    }
+</script>
+</body>
+</html>
