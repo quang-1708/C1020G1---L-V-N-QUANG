@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>thông tin nhiệt độ</title>
 </head>
 <body>
+   <script>
+       let nhiet_do = parseInt(prompt("nhập nhiệt độ"))
+       while (nhiet_do <20 || nhiet_do>100) {
+           if (nhiet_do > 100) {
+               nhiet_do = prompt("giảm nhiệt độ")
+           } else if (nhiet_do < 20) {
+               nhiet_do = prompt("tăng nhiệt độ")
+           }
+       }alert("Nhiệt độ phù hợp")
 
+   </script>
 </body>
 </html>

@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>hiển thị số</title>
 </head>
 <body>
+   <script>
+       let num1 = 0;
+       let num2 = 1;
+       let i;
+       let fn;
+        document.write(num1+ "<br>");
+        document.write(num2 + "<br>");
+       for (i=1;i <19 ;i++) {
+           fn= num1 + num2;
+           document.write(fn +"<br>");
+           num1 = num2;
+           num2 = fn;
+       }
 
+   </script>
 </body>
 </html>
