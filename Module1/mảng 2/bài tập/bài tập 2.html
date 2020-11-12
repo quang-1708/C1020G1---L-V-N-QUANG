@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<input type ="text" id="search">
+<input type="button" onclick="dich()" value="dịch">
+<p id ="dich"></p>
+ <script>
+     function dich(){
+     let  English =['thank' , 'sorry' , 'you' , 'I'];
+     let Vietnamese = ['cảm ơn' , 'xin lỗi' , 'bạn' , 'tôi'];
+     let search = document.getElementById("search").value;
+     let flag = false;
+     for ( let i=0 ; i < English.length ; i++) {
+         if (search === English[i]) {
+            English[i]=Vietnamese[i];
+             document.getElementById("dich").innerHTML = English[i]
+             flag = true;
+         }
+     } if (flag === false){
+         alert("Không có từ")
+         }
+     }
+     //document.getElementById("dich").innerHTML = Vietnamese
+ </script>
+</body>
+</html>
