@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <input type="button" onclick="bai_tap_1()" value="bài tập 1">
+ <input type="button" onclick="bai_tap_2()" value="bài tập 2">
+ <input type="button" onclick="bai_tap_3()" value="bài tập 3">
+<script>
+    function bai_tap_1() {
+        let myColor = ["red", "green", "white", "black"];
+        document.write(myColor.join())
+    }
+</script>
+ <script>
+     function bai_tap_2() {
+         let number = [1,2,8,3,7,4,6,9,5]
+         let number1 = [number[0]];
+         for (let i =1 ; i <number.length ; i++){
+             if (number[i] % 2===0 && number[i-1] %2===0){
+                 number1.push('-', number[i])
+             } else {
+                 number1.push(number[i])
+             }
+         }
+         document.write(number1.join (''));
+     }
+ </script>
+<script>
+    function bai_tap_3() {
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let str = 'The Quick Brown Fox';
+        let chuoi = [];
+        for (let i=0 ; i <str.length ; i++) {
+            if (UPPER.indexOf(str[i]) !== -1) {
+                chuoi.push(str[i].toLowerCase());
+            } else if (LOWER.indexOf(str[i] !==-1))
+            {
+                chuoi.push(str[i].toUpperCase());
+            }
+            else {
+                chuoi.push(str [i]);
+            }
+
+        }
+        document.write(chuoi.join(''));
+
+    }
+</script>
+</body>
+</html>
