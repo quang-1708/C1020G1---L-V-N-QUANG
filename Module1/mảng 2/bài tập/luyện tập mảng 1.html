@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập mảng 1</title>
+</head>
+<body>
+<input type="button" onclick="bai_tap_1()" value="bài tập 1">
+<input type="button" onclick="bai_tap_2()" value="bài tập 2">
+<input type="button" onclick="bai_tap_3()" value="bài tập 3">
+<input type="button" onclick="bai_tap_4()" value="bài tập 4">
+<input type="button" onclick="bai_tap_5()" value="bài tập 5">
+<input type="button" onclick="bai_tap_6()" value="bài tập 6">
+<input type="button" onclick="bai_tap_7()" value="bài tập 7">
+<input type="button" onclick="bai_tap_8()" value="bài tập 8">
+<input type="button" onclick="bai_tap_9()" value="bài tập 9">
+  <script>
+      function bai_tap_1() {
+          let arr = [1 , 15, 8, 10, 12, 9, 11, 3, 4, 19];
+          for (let i=0 ; i< arr.length ; i++) {
+              if (arr[i] >=10) {
+                  document.write(arr[i] + " ");
+              }
+          }
+      }
+  </script>
+  <script>
+      function bai_tap_2() {
+          let arr = [1 , 15, 8, 10, 12, 9, 11, 3, 4, 19];
+          let max = arr[0];
+          for (let i=0 ; i <arr.length ; i++){
+              if (max < arr [i]) {
+                  max = arr[i]
+
+              }
+              } alert("giá trị lớn nhất :" + max + " ")
+      }
+  </script>
+  <script>
+      function bai_tap_3() {
+          let arr = [1 , 15, 8, 10, 12, 9, 11, 3, 4, 19];
+          let max = arr[0];
+          let sum = 0;
+          let avage;
+          for (let i =0; i <arr.length ; i++) {
+              if (max < arr [i]) {
+                  max = arr[i]
+          } sum = sum + arr[i]
+          }
+          avage = sum/arr.length
+          document.write("giá trị lơn nhất" + max +"<br>" + " giá trị trung bình" + avage + " ")
+      }
+  </script>
+  <script>
+      function bai_tap_4() {
+          let n = parseInt(prompt("nhập số phần tử của mảng"));
+          let array = []; //gọi mảng sẽ chứa các giá trị của mảng
+          for (let x = 0; x < n; x++) {
+              //cho num chạy trong vòng lặp for để nhận nhiều giá trị
+              let num = parseInt(prompt("nhập những giá trị cho mảng "));
+              array.push(num);//đẩy những giá trị nhập trong num vào mảng arr
+          } array.reverse();
+          alert(array)
+      }
+  </script>
+  <script>
+      function bai_tap_5() {
+          let chuoi = prompt("nhập những giá trị cho chuỗi");
+          let nguyenam = 0;
+          for (let i =0 ;i < chuoi.length ; i++) {
+              if ( chuoi[i] =='u' ||  chuoi[i] =='e' ||  chuoi[i] =='o' || chuoi[i] =='a' ||  chuoi[i] =='i') {
+                      nguyenam++
+              }
+          }document.write(nguyenam)
+      }
+  </script>
+ <script>
+     let i;
+     function bai_tap_6() {
+         let num1 = prompt("hãy nhập số cần so sánh")
+         let arr =[];
+         for ( i=0 ; i < 10 ; i++) {
+              let num = prompt("hãy nhập giá trị của mảng");
+              arr.push(num);}
+         // for ( i=0 ; i < 10 ; i++) {
+         //     if (arr[i] == num1) {
+         //         document.write(num1 + "is in the array" + " ");
+         //         break;
+         //     }
+         // }
+         // if (i == 10){
+         //     document.write( num1 + "is not in the array"+ " "); }
+if (arr.indexOf(num1) !== -1) {
+    document.write(num1 + "is in the array" + " ");
+} else {
+    document.write( num1 + "is not in the array"+ " ");
+}
+
+
+
+     }
+ </script>
+</body>
+</html>
