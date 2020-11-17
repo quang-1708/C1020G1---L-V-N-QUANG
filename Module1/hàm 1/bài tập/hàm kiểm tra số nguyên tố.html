@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<body>
+ <script>
+    // let j;
+    // for (let i = 2; i < 10000; i++) {
+    //     for (j = 2; j < i; j++) {
+    //         if (i % j === 0) {
+    //             break;
+    //         }
+    //     }
+    //     if (j === i) {
+    //         document.write( i);
+    //
+    //     }
+    // }
+    function isPrime(number){
+        let a =true // gán biến a là số đó là số nguyên tố là đúng;
+        for ( let i =2 ; i <number ; i++) {
+            if (number % i ===0) //trường hợp này số này ko phải là số nguyên tố,suy ra a sai = false
+            {
+                a = false;
+                break;
+
+            }
+
+        } if (a=== true) // nêu trường hợp a là số nguyên tố đúng
+        {
+            return number // lưu trữ tất cả các giá trị của a
+        } else {
+            return "không phải số nguyên tố";
+        }
+    }
+     let num // gọi tham chiếu của hàm isPrime// ;
+    // suy ra
+    isPrime(num);
+    for (num =2 ; num < 10000; num++) // cho num chạy từ 2 đến 10000
+    {
+        if (isPrime(num) === num)//nếu isPrime(num) đúng và isPrime(num)= num thì in ra số num đó
+            {
+            document.write(num)
+        }
+    }
+ </script>
+</body>
+</html>

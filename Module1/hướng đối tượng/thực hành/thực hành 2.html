@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xây dựng lớp hình tròn</title>
+</head>
+<body>
+ <script>
+     class circle {
+         constructor(radiuscolor) {
+             this.radius =radius;
+             this.color = color;
+         }
+         // gọi hàm gọi bán kình
+         getradius () {
+             return this.radius;
+         //    tính toán bất cứ hàm gì phải có this
+         }
+         //gọi hàm tính diện tích
+         getArea (){
+             let S= Math.PI * this.radius * this.radius
+             return S;
+         }
+     }
+     let circle1 = new circle (2 , "blue");
+     // khai báo biến để nó hiểu gọi hàm bán kính
+     let radius = circle1.getradius();
+     let area = circle1.getArea();
+     alert(" radius " + radius + " area " + area);
+ </script>
+</body>
+</html>

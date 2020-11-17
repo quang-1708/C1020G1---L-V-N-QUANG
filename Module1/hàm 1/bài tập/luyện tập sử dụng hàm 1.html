@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập 1</title>
+</head>
+<body>
+ <input type="button" onclick="baitap1()" value="bài tập 1" >
+ <input type="button" onclick="baitap2()" value="bài tập 2 " >
+ <input type="button" onclick="baitap3()" value="bài tập 3 " >
+ <input type="button" onclick="baitap4()" value="bài tập 4 " >
+<script>
+    function baitap1() {
+        function alertMessage(string) {
+            alert(string)
+        }
+        alertMessage("xin chao")
+    }
+</script>
+<script>
+    function baitap2() {
+        function doiso(number) {
+
+            return (number + 1)
+        }
+        alert(doiso(4))
+    }
+</script>
+<script>
+    function baitap3() {
+        let sum;
+        function baitap(number1 , number2) {
+           if (number1 > number2){
+               alert(number1 + ">" + number2)
+           } else {
+               sum = number1 + number2
+               alert(sum)
+           }
+        }
+        let a =parseInt(prompt("nhập số thứ hai"))
+        let  b=parseInt(prompt("nhập số thứ hai"))
+      baitap( a, b);
+    }
+</script>
+<script>
+    function baitap4() {
+       let arr1 = ['Polaris', 'Aldebaran', 'Deneb, Vega', 'Altair', 'Dubhe' , 'Regulus']
+        let arr2 = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor- Leo']
+        function baitap(string) {
+               if (arr1.indexOf(string) !==-1){
+                   return arr2[arr1.indexOf(string)];
+
+          } else{
+            return "không có trong ngôi sao"
+        }let a= prompt("nhập tên ngôi sao")
+        alert(baitap(a))
+    }
+    }
+
+</script>
+</body>
+</html>
