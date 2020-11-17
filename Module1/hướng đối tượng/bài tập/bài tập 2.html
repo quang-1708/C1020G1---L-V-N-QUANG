@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperatua</title>
+</head>
+<body>
+  <script>
+     class Temperatua {
+         constructor( c) {
+             this.c = c;
+         }
+         getFahrenheit() {
+             let F = 9/5*this.c + 32;
+             return F
+         }
+         getKelvin (){
+             let K = this.c + 273;
+             return K
+         }
+     }
+     let nhietdo = new Temperatua(25)
+      let do_C = nhietdo.getFahrenheit()
+      let do_F =nhietdo.getKelvin()
+      alert(" độ C : "+ do_C + " độ F: " + do_F)
+
+  </script>
+</body>
+</html>

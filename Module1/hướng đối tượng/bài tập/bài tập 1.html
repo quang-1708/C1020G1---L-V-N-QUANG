@@ -6,7 +6,37 @@
 </head>
 <body>
   <script>
-      
+    class Ractangle {
+        constructor (length , width) {
+            this.length = length;
+            this.width = width ;
+        }
+        getChuvi () {
+           let C = (this.length + this.width)*2;
+           return C
+        }
+        getDientich () {
+            let S = this.length*this.width;
+            return S
+        }
+        setLength(x){
+            this.length = x;
+            return this.length
+        }
+        setWidth(y){
+            this.width = y;
+            return this.width;
+        }
+    } let hinh_chu_nhat = new Ractangle( 5, 3);
+      let chuvi = hinh_chu_nhat.getChuvi();
+     let dientich = hinh_chu_nhat.getDientich();
+      alert(" chu vi hình chữ nhật " + chuvi + " diện tích hình chữ nhật " + dientich);
+     hinh_chu_nhat.setLength(6);
+     hinh_chu_nhat.setWidth(4);
+    chuvi = hinh_chu_nhat.getChuvi();
+    dientich = hinh_chu_nhat.getDientich();
+    alert(" chu vi hình chữ nhật " + chuvi + " diện tích hình chữ nhật " + dientich);
+
   </script>
 </body>
 </html>

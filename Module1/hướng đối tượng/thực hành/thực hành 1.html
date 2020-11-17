@@ -6,15 +6,47 @@
 </head>
 <body>
  <script>
-     class date {
+     class Date {
          constructor(day , month , year) {
              this.day = day;
              this.month = month;
              this.year = year;
          }
+         setDay(x){
+             this.day = x;
+             return this.day
 
-} let ngay_thang_nam = new date (2 , 2 , 2007)
-     alert(ngay_thang_nam.day + "/" + ngay_thang_nam.month + "/" + ngay_thang_nam.year);
+         }
+         setMonth(y){
+             this.month = y;
+             return this.month
+         }
+         setYear(z){
+             this.year = z;
+             return this.year
+         }
+         getDay(){
+             return this.day;
+         }
+         getMonth(){
+             return this.month
+         }
+         getYear () {
+             return this.year
+         }
+     }
+      let ngay_thang_nam = new Date (2 , 2 , 2007)
+
+       let day= ngay_thang_nam.getDay();
+        let month =ngay_thang_nam.getMonth();
+        let year= ngay_thang_nam.getYear();
+     alert(day + "/" + month + "/" + year);
+
+     day =ngay_thang_nam.setDay(10);
+     month = ngay_thang_nam.setMonth(10);
+     year = ngay_thang_nam.setYear(2019);
+     alert(day + "/" + month + "/" + year);
+
  </script>
 </body>
 </html>
