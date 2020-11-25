@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thông tin khách hàng</title>
+</head>
+<body>
+<script>
+    let name ='lê văn quang';
+    let id= '206685275';
+    let day ='17/08/1993';
+    let email = 'levanquang1993.nina@gmail.com';
+    let address = 'đại lộc- quãng nam';
+    let customer ='gold';
+    let server ='house';
+    let mount='3';
+    let sale ='10';
+    let rentdays='4';
+    let typeroom='vip';
+let chosse = parseInt(prompt("1.Hiển thị thông tin \n" +
+            "2.Chỉnh sửa thông tin \n" +
+            "3.Thoát chương trình"));
+switch (chosse) {
+    case 1 :{
+        alert("tên: " + name +"\n"+
+            "cmnd: "+ id+ "\n"+"" +
+            "ngày tháng năm: " + day + "\n"+
+            "email: " + email +"\n"+
+            "địa chỉ: " + address + "\n" +
+            "khách hàng: " + customer +"\n"+
+            "dịch vụ: " + server + "\n"+
+            "số lượng: " + mount +"\n"+
+            "giảm giá: " + sale + "\n"+
+            "số ngày: " + rentdays +"\n"+
+            "kiểu phòng: " + typeroom +"\n");
+        break;
+    }
+    case 2: {
+       let chosseEdit =parseInt(prompt("1.tên: " + name +"\n"+
+            "2.cmnd: "+ id+ "\n"+"" +
+            "3.ngày tháng năm: " + day + "\n"+
+            "4.email: " + email +"\n"+
+            "5.địa chỉ: " + address + "\n" +
+            "6.hách hàng: " + customer +"\n"+
+            "7.dịch vụ: " + server + "\n"+
+            "8.số lượng: " + mount +"\n"+
+            "9.giảm giá: " + sale + "\n"+
+            "10.số ngày: " + rentdays +"\n"+
+            "11.kiểu phòng: " + typeroom +"\n"))
+          switch (chosseEdit) {
+           case 1:{
+               name= prompt("hãy nhập lại tên");
+               break;
+           }
+               case 2: {
+               id= prompt("hãy nhập lại chứng minh");
+               break;
+               }
+               case 3: {
+                   day = prompt("hãy nhập lại ngày tháng năm");
+                   break;
+               }
+               case 4: {
+                   address = prompt("hãy nhập lại địa chỉ");
+                   break;
+               }
+               case 5: {
+                   customer = prompt("hãy chọn lại loại khách hàng");
+                   break;
+               }
+               case 6: {
+                   server = prompt("hãy chọn lại loại dịch vụ");
+                   break;
+               }
+               case 7: {
+                   mount = prompt("hãy chọn lại số lượng");
+                   break;
+               }
+               case 8: {
+                   sale = prompt("hãy chọn lại giảm giá");
+                   break;
+               }
+               case 9: {
+                   rentdays = prompt("hãy chọn lại số ngày");
+                   break
+               }
+               default :{
+                   alert('Faile')
+               }
+           }
+           alert("tên: " + name +"\n"+
+            "cmnd: "+ id+ "\n"+"" +
+            "ngày tháng năm: " + day + "\n"+
+            "email: " + email +"\n"+
+            "địa chỉ: " + address + "\n" +
+            "khách hàng: " + customer +"\n"+
+            "dịch vụ: " + server + "\n"+
+            "số lượng: " + mount +"\n"+
+            "giảm giá: " + sale + "\n"+
+            "số ngày: " + rentdays +"\n"+
+            "kiểu phòng: " + typeroom +"\n");
+              break;
+       }
+       default : {
+           alert("bạn đã nhập nhầm số")
+       }
+       case 3: {
+           let money =0;
+           if (server ==='villa'){
+               money =500;
+           }else if (server ==="house"){
+               money=300;
+           }else  if (server ==="room"){
+               money=100;
+           }
+           let a=0;
+           if (address==="đà nẵng"){
+               a +=20;
+           }else if(address==="huế"){
+               a +=10;
+           }else if(address==="quãng nam"){
+               a +=5;
+           }
+
+           if (customer==="diamond"){
+               a +=15;
+           } else if(customer==="platium"){
+               a +=10;
+           }else if (customer==="gold"){
+               a +=5;
+           }else if (customer==="silver"){
+               a +=2;
+           }else if (customer==="menber"){
+               a =a;
+           }
+
+           if (rentdays >7){
+               a +=30;
+           }else if (rentdays>= 5){
+               a +=20;
+           } else if(rentdays>= 2){
+               a +=109
+           }
+           alert("Total pay :" +(money*rentdays - a))
+       }
+
+    }
+
+</script>
+</body>
+</html>

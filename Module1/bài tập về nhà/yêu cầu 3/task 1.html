@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name;
+    let id;
+    let day ;
+    let email;
+    let address;
+    let customer;
+    let server;
+    let mount;
+    let sale;
+    let rentdays;
+    let typeroom;
+    let totalpay;
+    let check =false;
+
+    let tempName =""
+    name = prompt("hãy nhập tên của bạn");
+    name=name.trim().toLowerCase()
+    for (let i=0; i<name.length;i++){
+        if(name.charAt(i)===" "&&name.charAt(i+1)){
+              continue;
+        }
+        if(i===0 || name.charAt(i-1)===" "){
+            tempName+=name.charAt(i).toUpperCase()
+            continue;
+        }
+        tempName+=name.charAt(i)
+    }  name=tempName
+    do {
+        id = prompt("hãy nhập chứng minh của bạn");
+        if (!isNaN(id)){
+            id=Number.parseFloat(id)
+        }
+        if (!Number.isInteger(id)){
+            alert("chứng minh nhân dân không đúng")
+            continue;
+        }if (id>10000000 || id <99999999){
+            alert("chứng minh nhân dân không đúng");
+            continue;
+        }
+        check=true;
+    }while (!check){
+    }
+    check =false;
+    do {
+        day = prompt("hãy nhập ngày tháng năm sinh của bạn");
+        if(day.charAt(2)==="/"&& day.charAt(5)==="/"){
+            let ngay=day.substring(0,2);
+            let thang=day.substring(3,5);
+            let nam=day.substring(6,10);
+            if(!isNaN(ngay)&& !isNaN(thang)&& !isNaN(nam)){
+                ngay =Number.parseFloat(ngay);
+                thang =Number.parseFloat(thang);
+                nam = Number.parseFloat(nam);
+                if (!Number.isInteger(ngay)&&!Number.isInteger(thang)&&!Number.isInteger(nam)){
+                    if(ngay<32&&thang<12&&year>1950){
+                        check=true
+                    }
+                }
+            }
+            if (!check){
+                alert("ngày sinh của bạn không đúng định dạng")
+            }
+        }
+    }while (!check){
+
+    }
+    check=false
+    do {
+        let a=0;
+        let b=0
+        email = prompt("hãy nhập email của bạn");
+        for (let i=0; i<email.length;i++){
+            if (email.charAt(i)==="@"){
+                a++
+              for (let j=i+1;j<email.length;j++ ){
+                  if(email.charAt(j)==="."){
+                      b++
+                  }
+              }
+            }
+            if (a !=1 || b <1){
+                alert("email của bạn nhập lại không đúng")
+            }else {
+                check = true;
+            }
+        }
+    }while (!check){
+
+    }
+    let temAddress="";
+    address = prompt("hãy nhập địa chỉ của bạn");
+    address=address.trim().toLowerCase()
+    for (let i=0; i<address.length;i++){
+        if(address.charAt(i)===" "&&address.charAt(i+1)){
+            continue;
+        }
+        if(i===0 || address.charAt(i-1)===" "){
+            tempAddress+=address.charAt(i).toUpperCase()
+            continue;
+        }
+        tempAddress+=address.charAt(i)
+    }  address=tempAddress
+
+    customer= prompt("hãy nhập loại khách hàng");
+    server = prompt("hãy nhập loại dịch vụ bạn cần");
+    do {
+        mount = prompt("hãy nhập số lượng")
+        if(!isNaN(mount)){
+            mount=Number.parseFloat(mount)
+            if(!Number.isInteger(mount)&&mount>0){
+                check=true
+            }
+        }
+    }while (!check){
+
+    }
+
+    sale = prompt("hãy nhập mã giảm giá của bạn");
+    check=false
+    do{
+        rentdays= prompt("hãy nhập số ngày lưu trú");
+        if(!isNaN(rentdays)){
+            rentdays =Number.parseFloat(rentdays);
+
+        if (!Number.isInteger(rentdays)&&rentdays>0){
+                check = true
+        }
+        }
+
+    }while (!check){
+check=false
+    }
+
+    typeroom= prompt("hãy nhập loại phòng");
+</script>
+</body>
+</html>

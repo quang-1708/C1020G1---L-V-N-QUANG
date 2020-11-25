@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <title>biến kiểu dữ liệu và toán tử</title>
 </head>
-<body id="form" name="form1">
+<body>
 <table>
     <tr>
-        <td>name</td><br>
-    </tr>
-
-    <tr>
-        <td> <input type="text" id="name"></td>
+        <td>name</td>
     </tr>
     <tr>
-        <td>ID</td></tr>
-    <tr>
-        <td><input type="number" id="ID"></td>
-    </tr>
-    <tr>
-        <td id="ngaythangnam">day/month/year:</td>
-    </tr>
-    <tr>
-        <td><input type="number" value = " dd/mm/yyyy "> </td>
-
+        <td>
+        <input type="text" id="name">
         </td>
     </tr>
+    <tr>
+        <td>ID</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="ID">
+        </td>
+    </tr>
+    <tr>
+        <td>day/month/year:</td>
+    </tr>
+    <tr>
+          <td colspan="3">
+             <input type="date" name="day/month/year" id="ngaythangnam">
+          </td>
+   </tr>
     <tr>
         <td> email</td>
     </tr>
@@ -51,7 +55,7 @@
         </select></td>
     </tr>
     <tr>
-        <td>giảm giá</td>
+        <td>sale</td>
     </tr>
     <tr>
         <td><input type= "number"  id="giamgia"></td>
@@ -59,30 +63,34 @@
     <tr>
         <td>Mount</td>
     </tr>
-    <tr><td><input type="number" nam="số lượng" id="mount"></td>
+    <tr><td><input type="number" name="số lượng" id="mount"></td>
     </tr>
     <tr>
         <td>rentdays</td>
     </tr>
     <tr>
-        <td><input type="number" id="ngay"></td>
+        <td><input type="number" id="rentdays"></td>
     </tr>
     <tr>
-        <td><label for="server">service:</label></td>
+        <td>server</td>
     </tr>
     <tr>
-        <td><label><input type="checkbox "id="server" value="villa"></label>
-            <label> <input type="checkbox"id="server1" value="house"></label>
-            <input type="checkbox" value="room">Room
+        <td>
+            <select id="server">
+              <option>villa</option>
+              <option>house</option>
+              <option>rom</option>
+            </select>
         </td>
     </tr>
     <tr>
-        <td>typerom</td>
+            <td>typeroom</td>
     </tr>
     <tr>
-        <td> <input type="radio" name="vip" value="vip" checked>Vip
-             <input type="radio" name="business" value="business">Business
-             <input type="radio" name="normal" value="normal">Normal
+        <td><select id="typeroom">
+             <option>Vip</option>
+             <option>Business</option>
+             <option>Normal</option>
         </select>
         </td>
     </tr>
@@ -91,7 +99,6 @@
             <input type="button" onclick="send()" value="Submit">
             <input onclick="resetForm()" type="button" value="Reset">
         </td>
-
     </tr>
 </table>
 <script src='information.js'></script>

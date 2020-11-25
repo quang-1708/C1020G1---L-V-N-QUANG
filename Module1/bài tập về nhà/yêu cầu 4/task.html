@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>yêu cầu 4</title>
+</head>
+<body>
+<script>
+    let arr= [];
+    while (true){
+    let chosse =parseInt(prompt("1.hãy nhập thêm customer" +'\n' +"2.hãy xóa customer"))
+    switch (chosse) {
+        case 1: {
+            let num = prompt("hãy nhập thêm customer cần thêm");
+            for (let i = 0; i < num; i++) {
+                let nameCustomer = prompt("hãy nhập tên của customer");
+                arr.push(nameCustomer);
+            }
+            arr.sort();
+            arr.reverse();
+            let a = ""
+            for (let i = 0; i < arr.length; i++) {
+                a += (arr[i]);
+
+            }
+            alert(a);
+            break;
+        }
+        case 2: {
+            check=false
+             let nameCustomer =prompt("hãy nhập customer bạn muốn xóa");
+             for (let i=0; i<arr.length;i++){
+                 if (arr[i]===nameCustomer){
+                     arr.slice(i,1)
+                     check=true
+                 }
+             }
+             if(!check){
+                 alert("tên bạn muốn xóa không có trong mảng")
+             }
+        }
+
+        default: {
+            alert("Faile")
+        }
+    }
+    }
+</script>
+</body>
+</html>

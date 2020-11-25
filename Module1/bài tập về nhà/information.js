@@ -1,27 +1,27 @@
 function send(){
     let name= document.getElementById("name");
     let ID = document.getElementById("ID");
-    let email = document.getElementById("email");
     let ngaythangnam = document.getElementById("ngaythangnam");
+    let email = document.getElementById("email");
     let address = document.getElementById("address");
-    let sale = document.getElementById("giamgia");
     let customer = document.getElementById("customer");
+    let sale = document.getElementById("giamgia");
     let mount = document.getElementById("mount");
-    let renday = document.getElementById("rendays");
+    let renday = document.getElementById("rentdays");
     let server = document.getElementById("server");
-    let typerom = document.getElementById("typerom");
+    let typeroom = document.getElementById("typeroom");
 
-    document.write("Họ và tên :" + name.value +'<br>');
-  document.write("chứng minh nhân dân :" + ID.value + '<br>');
-    document.write("email :" + email.value + '<br>');
-    document.write("ngày-tháng-năm :" + ngaythangnam.value + '<br>');
-   document.write("-địa chỉ :" + address.value + '<br>');
-    document.write("giảm giá :" + sale.value + '<br>');
-   document.write("số lượng :" + mount.value + '<br>');
-   document.write("khách hàng :" + customer.value + '<br>');
-    document.write("số ngày :" + renday.value + '<br>');
-    document.write("dịch vụ :" + server.value + '<br>');
-   document.write("loại phòng :" + typerom.value);
+    document.write("FullName:" + name.value +'<br>');
+  document.write("ID:" + ID.value + '<br>');
+    document.write("day/month/year:" + ngaythangnam.value + '<br>');
+  document.write("email :" + email.value + '<br>');
+  document.write("Address:" + address.value + '<br>');
+    document.write("customer:" + customer.value + '<br>');
+    document.write("sale:" + sale.value + '<br>');
+   document.write("mount:" + mount.value + '<br>');
+  document.write("renday:" + renday.value + '<br>');
+    document.write("server:" + server.value + '<br>');
+   document.write("typeroom:" + typeroom.value);
 
 
 }
