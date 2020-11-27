@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    class sotietkiem {
+        constructor(name, id, ma_so, loai_tiet_kiem, day_open, so_tien) {
+            this.name = name;
+            this.id - id;
+            this.ma_so = ma_so;
+            this.loai_tiet_kiem = loai_tiet_kiem;
+            this.day_open = day_open;
+            this.so_tien = so_tien;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getMaso() {
+            return this.ma_so;
+        }
+
+        getLoaitietkiem() {
+            return this.loai_tiet_kiem;
+        }
+
+        getNgaymoso() {
+            return this.day_open;
+        }
+
+        getSotien() {
+            return this.so_tien
+        }
+    }
+    let check = true;
+    ma_so =prompt("bạn hãy nhập mã sổ của bạn");
+    if(ma_so >=0){
+        alert("mã số bạn nhập không đúng,hãy nhập lại")
+    }else {
+        check=true;
+    }
+    id = prompt("hãy nhập cmnd của bạn");
+    if (!isNaN(id)){
+        id=Number.parseFloat(id);
+
+    } if (!Number.isInteger(id)) {
+        alert("chứng minh nhân dân không đúng");
+    }
+
+</script>
+</body>
+</html>

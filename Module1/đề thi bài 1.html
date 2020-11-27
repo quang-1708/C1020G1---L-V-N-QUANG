@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài thi</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = [];
+    check = true;
+    let n = parseInt(prompt("hãy nhập số phần tử của mảng"));
+    if (n <=50) {
+          check=true;
+    }
+
+    for(let i = 0 ; i < n; i++) {
+
+        let c = prompt("hẫy nhập phần tử thứ" + i);
+        a.push(c);
+    }
+      for (let i = 0; i < n; i++) {
+          let j;
+         for (j = 2; j < a[i]; j++) {
+            if (a[i] % j === 0) {
+                break;
+
+            }
+        }
+          if (a[i] == j) {
+
+              b.push(a[i]);
+        }
+
+    }
+    document.write(a+"<br>");
+    document.write(b);
+
+
+</script>
+</body>
+</html>
